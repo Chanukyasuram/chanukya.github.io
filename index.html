@@ -1,16 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mg7</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mg7</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar .name {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1em;
+    }
+
+    .navbar .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content area */
+    .content {
+      display: flex;
+      padding: 40px 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      flex: 1;
+      min-width: 280px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <h1>Chanukya</h1>
 
-    <ol>
-        <li><a href="https://portfolio-nvk8.onrender.com" target="_blank">Portfolio</a></li>
-    </ol>
+  <h1>Chanukya</h1>
+
+  <ol>
+    <li><a href="#" onclick="showPortfolio()">Portfolio</a></li>
+  </ol>
+
+  <div id="portfolio-section" style="display:none;">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="name">Chanukya</div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="box">
+        <h2>MERN Stack Developer</h2>
+        <p>This is a dummy test about me.</p>
+      </div>
+      <div class="box">
+        <!-- Replace the src with your image path -->
+        <img src="your-image.jpg">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPortfolio() {
+      document.getElementById('portfolio-section').style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
